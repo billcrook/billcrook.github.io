@@ -1,0 +1,18 @@
+---
+layout: post
+title: "Test post"
+date: 2013-10-02 21:45
+comments: true
+categories: testing
+published: false
+---
+
+Here is some code:
+
+``` scala
+case class Testing(one: Int, two: Int, three: Int)
+```
+
+Here is a kitten:
+
+{% img http://placekitten.com/300/500 150 250 %}
