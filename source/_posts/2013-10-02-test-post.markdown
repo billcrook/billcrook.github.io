@@ -10,7 +10,9 @@ published: false
 Here is some code:
 
 ``` scala
-case class Testing(one: Int, two: Int, three: Int)
+case class Testing(one: Int, two: Int, three: Int){
+  def four = 4
+}
 ```
 
 Here is a kitten:
