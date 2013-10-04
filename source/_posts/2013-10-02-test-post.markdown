@@ -4,7 +4,6 @@ title: "Test post"
 date: 2013-10-02 21:45
 comments: true
 categories: testing
-published: false
 ---
 
 Veggies sunt bona vobis, proinde vos postulo esse magis kakadu plum tatsoi shallot grape kale yarrow gumbo desert raisin pea sprouts swiss chard.
