@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Bill Crook]]></title>
-  <link href="http://billcrook.github.io/atom.xml" rel="self"/>
+  <title><![CDATA[Category: testing | Bill Crook]]></title>
+  <link href="http://billcrook.github.io/blog/categories/testing/atom.xml" rel="self"/>
   <link href="http://billcrook.github.io/"/>
   <updated>2013-10-04T15:32:39-04:00</updated>
   <id>http://billcrook.github.io/</id>
@@ -26,18 +26,15 @@
 
 <p>Here is some code:</p>
 
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='scala'><span class='line'><span class="k">case</span> <span class="k">class</span> <span class="nc">Testing</span><span class="o">(</span><span class="n">one</span><span class="k">:</span> <span class="kt">Int</span><span class="o">,</span> <span class="n">two</span><span class="k">:</span> <span class="kt">Int</span><span class="o">,</span> <span class="n">three</span><span class="k">:</span> <span class="kt">Int</span><span class="o">){</span>
-</span><span class='line'>  <span class="k">def</span> <span class="n">four</span> <span class="k">=</span> <span class="mi">4</span>
-</span><span class='line'><span class="o">}</span>
-</span></code></pre></td></tr></table></div></figure>
-
+<p><code>scala
+case class Testing(one: Int, two: Int, three: Int){
+  def four = 4
+}
+</code></p>
 
 <p>Here is a kitten:</p>
 
-<p><img src="http://placekitten.com/300/500" width="150" height="250"></p>
+<p><img class="<a" src="href="http://placekitten.com/300/500">http://placekitten.com/300/500</a>" width="150" height="250"></p>
 ]]></content>
   </entry>
   
