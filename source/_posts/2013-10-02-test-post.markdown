@@ -23,3 +23,7 @@ case class Testing(one: Int, two: Int, three: Int){
 Here is a kitten:
 
 {% img http://placekitten.com/300/500 150 250 %}
+
+Here is a gist:
+
+{% gist 6758279 %}
