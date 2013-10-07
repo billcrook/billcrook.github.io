@@ -4,7 +4,7 @@
   <title><![CDATA[Category: testing | Bill Crook]]></title>
   <link href="http://billcrook.github.io/blog/categories/testing/atom.xml" rel="self"/>
   <link href="http://billcrook.github.io/"/>
-  <updated>2013-10-04T15:32:39-04:00</updated>
+  <updated>2013-10-07T17:26:45-04:00</updated>
   <id>http://billcrook.github.io/</id>
   <author>
     <name><![CDATA[Bill Crook]]></name>
@@ -35,6 +35,12 @@ case class Testing(one: Int, two: Int, three: Int){
 <p>Here is a kitten:</p>
 
 <p><img class="<a" src="href="http://placekitten.com/300/500">http://placekitten.com/300/500</a>" width="150" height="250"></p>
+
+<p>Here is a gist:</p>
+
+<p><div><script src='https://gist.github.com/6758279.js'></script>
+<noscript><pre><code>case class Test(one: Int, two: Int, three: Int)</code></pre></noscript></div>
+</p>
 ]]></content>
   </entry>
   

@@ -4,7 +4,7 @@
   <title><![CDATA[Bill Crook]]></title>
   <link href="http://billcrook.github.io/atom.xml" rel="self"/>
   <link href="http://billcrook.github.io/"/>
-  <updated>2013-10-04T15:32:39-04:00</updated>
+  <updated>2013-10-07T17:26:45-04:00</updated>
   <id>http://billcrook.github.io/</id>
   <author>
     <name><![CDATA[Bill Crook]]></name>
@@ -38,6 +38,12 @@
 <p>Here is a kitten:</p>
 
 <p><img src="http://placekitten.com/300/500" width="150" height="250"></p>
+
+<p>Here is a gist:</p>
+
+<div><script src='https://gist.github.com/6758279.js'></script>
+<noscript><pre><code>case class Test(one: Int, two: Int, three: Int)</code></pre></noscript></div>
+
 ]]></content>
   </entry>
   
