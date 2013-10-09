@@ -1,7 +1,7 @@
 $my-bg: #fcfcfc;
 $my-text: #333333;
 $my-text-light: #666666;
-$my-title: #000000;
+$my-title: #fcfcfc;
 $my-footer-color: #bbbbbb;
 
 $nav-bg: #fcfcfc;
@@ -21,11 +21,11 @@ body {
 $main-bg: $my-bg !default;
 $page-bg: $my-bg !default;
 
-$header-bg: $my-bg;
+$header-bg: #000000;
 $title-color: $my-title !default;
 $text-color: $my-text !default;
 $text-color-light: $my-text-light !default;
-$subtitle-color: darken($header-bg, 58);
+$subtitle-color: darken($my-title, 42);
 
 $nav-bg-front: $nav-bg;
 $nav-bg-back: $nav-bg;
