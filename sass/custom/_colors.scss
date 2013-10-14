@@ -1,14 +1,19 @@
-$my-bg: #fcfcfc;
-$my-text: #333333;
-$my-text-light: #666666;
-$my-title: #fcfcfc;
-$my-footer-color: #bbbbbb;
+$my-bg: #fafafa;
+$my-text: #303438;
+$header-bg: #303438;
+$my-title: $my-bg;
+$sidebar-link-color: #6B2C35;
 
-$nav-bg: #fcfcfc;
+$my-footer-color: $my-bg;
+$my-text-light: #666;
+$nav-bg: $my-bg;
+
+$link-color: lighten($sidebar-link-color, 4);
 
 html {
   background: $my-bg !important;
 }
+
 body {
   > div {
     background: $my-bg !important;
@@ -21,7 +26,6 @@ body {
 $main-bg: $my-bg !default;
 $page-bg: $my-bg !default;
 
-$header-bg: #000000;
 $title-color: $my-title !default;
 $text-color: $my-text !default;
 $text-color-light: $my-text-light !default;
@@ -48,3 +52,15 @@ $footer-border-bottom: darken($footer-bg, 15) !default;
 $footer-link-color: darken($footer-bg, 38) !default;
 $footer-link-color-hover: darken($footer-color, 25) !default;
 $page-border-bottom: darken($footer-bg, 5) !default;
+
+//$link-color-active: 
+//$link-color-hover: 
+//$link-color-visited: 
+//$my-footer-color
+//$pre-color
+//$sidebar-color: 
+//$sidebar-link-color-active
+//$sidebar-link-color-hover
+//$sidebar-link-color-subdued
+//$sidebar-link-color-subdued-hover
+
