@@ -4,7 +4,7 @@
   <title><![CDATA[bill crook]]></title>
   <link href="http://billcrook.github.io/atom.xml" rel="self"/>
   <link href="http://billcrook.github.io/"/>
-  <updated>2013-10-16T09:38:56-04:00</updated>
+  <updated>2013-10-16T14:15:14-04:00</updated>
   <id>http://billcrook.github.io/</id>
   <author>
     <name><![CDATA[Bill Crook]]></name>
@@ -12,6 +12,17 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Graphviz test]]></title>
+    <link href="http://billcrook.github.io/blog/2013/10/16/graphviz-test/"/>
+    <updated>2013-10-16T14:11:00-04:00</updated>
+    <id>http://billcrook.github.io/blog/2013/10/16/graphviz-test</id>
+    <content type="html"><![CDATA[<h3>a test graph</h3>
+
+<p><img src='http://billcrook.github.io/images/graphviz/g-57023c2552f7752921d58001f1867c02.svg'></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Another test]]></title>
