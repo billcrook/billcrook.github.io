@@ -1,6 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
+<<<<<<< HEAD
         <loc>http://bill.crook.io/blog/2013/10/02/test-post/</loc>
         <lastmod>2014-04-02T11:26:14-04:00</lastmod>
     </url>
@@ -23,5 +24,29 @@
     <url>
         <loc>http://bill.crook.io/robots.txt</loc>
         <lastmod>2014-04-02T11:26:14-04:00</lastmod>
+=======
+        <loc>http://billcrook.github.io/blog/2013/10/02/test-post/</loc>
+        <lastmod>2013-10-07T17:13:24-04:00</lastmod>
+    </url>
+    <url>
+        <loc>http://billcrook.github.io/blog/2013/10/15/another-test/</loc>
+        <lastmod>2013-10-16T14:12:39-04:00</lastmod>
+    </url>
+    <url>
+        <loc>http://billcrook.github.io/blog/2013/10/16/graphviz-test/</loc>
+        <lastmod>2013-10-16T14:12:36-04:00</lastmod>
+    </url>
+    <url>
+        <loc>http://billcrook.github.io/</loc>
+        <lastmod>2013-10-16T14:12:39-04:00</lastmod>
+    </url>
+    <url>
+        <loc>http://billcrook.github.io/blog/archives/</loc>
+        <lastmod>2013-10-16T14:12:39-04:00</lastmod>
+    </url>
+    <url>
+        <loc>http://billcrook.github.io/robots.txt</loc>
+        <lastmod>2013-10-07T11:35:37-04:00</lastmod>
+>>>>>>> 01a2c1567025795d6d2c0519cd9c73227f57a2be
     </url>
 </urlset>

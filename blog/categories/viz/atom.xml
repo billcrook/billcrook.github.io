@@ -2,10 +2,17 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: viz | bill crook]]></title>
+<<<<<<< HEAD
   <link href="http://bill.crook.io/blog/categories/viz/atom.xml" rel="self"/>
   <link href="http://bill.crook.io/"/>
   <updated>2014-04-02T11:26:32-04:00</updated>
   <id>http://bill.crook.io/</id>
+=======
+  <link href="http://billcrook.github.io/blog/categories/viz/atom.xml" rel="self"/>
+  <link href="http://billcrook.github.io/"/>
+  <updated>2013-10-16T14:15:14-04:00</updated>
+  <id>http://billcrook.github.io/</id>
+>>>>>>> 01a2c1567025795d6d2c0519cd9c73227f57a2be
   <author>
     <name><![CDATA[Bill Crook]]></name>
     
@@ -15,9 +22,15 @@
   
   <entry>
     <title type="html"><![CDATA[Graphviz test]]></title>
+<<<<<<< HEAD
     <link href="http://bill.crook.io/blog/2013/10/16/graphviz-test/"/>
     <updated>2013-10-16T14:11:00-04:00</updated>
     <id>http://bill.crook.io/blog/2013/10/16/graphviz-test</id>
+=======
+    <link href="http://billcrook.github.io/blog/2013/10/16/graphviz-test/"/>
+    <updated>2013-10-16T14:11:00-04:00</updated>
+    <id>http://billcrook.github.io/blog/2013/10/16/graphviz-test</id>
+>>>>>>> 01a2c1567025795d6d2c0519cd9c73227f57a2be
     <content type="html"><![CDATA[<h3>a test graph</h3>
 
 <p><img src='/images/graphviz/g-9311e72c06652998d1f7ca94861441bb.svg'></p>

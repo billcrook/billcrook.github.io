@@ -1,4 +1,8 @@
 User-agent: *
 Disallow: 
 
+<<<<<<< HEAD
 Sitemap: http://bill.crook.io/sitemap.xml 
+=======
+Sitemap: http://billcrook.github.io/sitemap.xml 
+>>>>>>> 01a2c1567025795d6d2c0519cd9c73227f57a2be
