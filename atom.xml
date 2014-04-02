@@ -2,17 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[bill crook]]></title>
-<<<<<<< HEAD
   <link href="http://bill.crook.io/atom.xml" rel="self"/>
   <link href="http://bill.crook.io/"/>
   <updated>2014-04-02T11:26:32-04:00</updated>
   <id>http://bill.crook.io/</id>
-=======
-  <link href="http://billcrook.github.io/atom.xml" rel="self"/>
-  <link href="http://billcrook.github.io/"/>
-  <updated>2013-10-16T14:15:14-04:00</updated>
-  <id>http://billcrook.github.io/</id>
->>>>>>> 01a2c1567025795d6d2c0519cd9c73227f57a2be
   <author>
     <name><![CDATA[Bill Crook]]></name>
     
@@ -22,35 +15,20 @@
   
   <entry>
     <title type="html"><![CDATA[Graphviz test]]></title>
-<<<<<<< HEAD
     <link href="http://bill.crook.io/blog/2013/10/16/graphviz-test/"/>
     <updated>2013-10-16T14:11:00-04:00</updated>
     <id>http://bill.crook.io/blog/2013/10/16/graphviz-test</id>
     <content type="html"><![CDATA[<h3>a test graph</h3>
 
 <p><img src='http://bill.crook.io/images/graphviz/g-57023c2552f7752921d58001f1867c02.svg'></p>
-=======
-    <link href="http://billcrook.github.io/blog/2013/10/16/graphviz-test/"/>
-    <updated>2013-10-16T14:11:00-04:00</updated>
-    <id>http://billcrook.github.io/blog/2013/10/16/graphviz-test</id>
-    <content type="html"><![CDATA[<h3>a test graph</h3>
-
-<p><img src='http://billcrook.github.io/images/graphviz/g-57023c2552f7752921d58001f1867c02.svg'></p>
->>>>>>> 01a2c1567025795d6d2c0519cd9c73227f57a2be
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[Another test]]></title>
-<<<<<<< HEAD
     <link href="http://bill.crook.io/blog/2013/10/15/another-test/"/>
     <updated>2013-10-15T22:15:00-04:00</updated>
     <id>http://bill.crook.io/blog/2013/10/15/another-test</id>
-=======
-    <link href="http://billcrook.github.io/blog/2013/10/15/another-test/"/>
-    <updated>2013-10-15T22:15:00-04:00</updated>
-    <id>http://billcrook.github.io/blog/2013/10/15/another-test</id>
->>>>>>> 01a2c1567025795d6d2c0519cd9c73227f57a2be
     <content type="html"><![CDATA[<h2>A Second Level Header</h2>
 
 <p>Now is the time for all good men to come to
@@ -79,15 +57,9 @@ dog&rsquo;s back.</p>
   
   <entry>
     <title type="html"><![CDATA[Test post]]></title>
-<<<<<<< HEAD
     <link href="http://bill.crook.io/blog/2013/10/02/test-post/"/>
     <updated>2013-10-02T21:45:00-04:00</updated>
     <id>http://bill.crook.io/blog/2013/10/02/test-post</id>
-=======
-    <link href="http://billcrook.github.io/blog/2013/10/02/test-post/"/>
-    <updated>2013-10-02T21:45:00-04:00</updated>
-    <id>http://billcrook.github.io/blog/2013/10/02/test-post</id>
->>>>>>> 01a2c1567025795d6d2c0519cd9c73227f57a2be
     <content type="html"><![CDATA[<p>Veggies sunt bona vobis, proinde vos postulo esse magis kakadu plum tatsoi shallot grape kale yarrow gumbo desert raisin pea sprouts swiss chard.</p>
 
 <p>Black-eyed pea artichoke napa cabbage black-eyed pea gram silver beet plantain broccoli rabe. Chickweed corn courgette kohlrabi jícama asparagus arugula. Cabbage chickweed tatsoi bunya nuts rock melon arugula asparagus artichoke endive bamboo shoot winter purslane wakame pumpkin cauliflower gumbo sweet pepper courgette spring onion.</p>
