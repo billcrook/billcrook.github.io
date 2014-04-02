@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[bill crook]]></title>
+  <link href="http://bill.crook.io/atom.xml" rel="self"/>
+  <link href="http://bill.crook.io/"/>
+  <updated>2014-04-02T11:21:39-04:00</updated>
+  <id>http://bill.crook.io/</id>
+  <author>
+    <name><![CDATA[Bill Crook]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Graphviz test]]></title>
+    <link href="http://bill.crook.io/blog/2013/10/16/graphviz-test/"/>
+    <updated>2013-10-16T14:11:00-04:00</updated>
+    <id>http://bill.crook.io/blog/2013/10/16/graphviz-test</id>
+    <content type="html"><![CDATA[<h3>a test graph</h3>
+
+<p><img src='http://bill.crook.io/images/graphviz/g-57023c2552f7752921d58001f1867c02.svg'></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Another test]]></title>
+    <link href="http://bill.crook.io/blog/2013/10/15/another-test/"/>
+    <updated>2013-10-15T22:15:00-04:00</updated>
+    <id>http://bill.crook.io/blog/2013/10/15/another-test</id>
+    <content type="html"><![CDATA[<h2>A Second Level Header</h2>
+
+<p>Now is the time for all good men to come to
+the aid of their country. This is just a
+regular paragraph.</p>
+
+<p>The quick brown fox jumped over the lazy
+dog&rsquo;s back.</p>
+
+<h3>Header 3</h3>
+
+<blockquote><p>This is a blockquote.</p>
+
+<p>This is the second paragraph in the blockquote.</p></blockquote>
+
+<ul>
+<li>item</li>
+<li>item 2</li>
+<li>item 3</li>
+</ul>
+
+
+<p>This is an <a href="http://example.com/" title="With a Title">example link</a>.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Test post]]></title>
+    <link href="http://bill.crook.io/blog/2013/10/02/test-post/"/>
+    <updated>2013-10-02T21:45:00-04:00</updated>
+    <id>http://bill.crook.io/blog/2013/10/02/test-post</id>
+    <content type="html"><![CDATA[<p>Veggies sunt bona vobis, proinde vos postulo esse magis kakadu plum tatsoi shallot grape kale yarrow gumbo desert raisin pea sprouts swiss chard.</p>
+
+<p>Black-eyed pea artichoke napa cabbage black-eyed pea gram silver beet plantain broccoli rabe. Chickweed corn courgette kohlrabi jícama asparagus arugula. Cabbage chickweed tatsoi bunya nuts rock melon arugula asparagus artichoke endive bamboo shoot winter purslane wakame pumpkin cauliflower gumbo sweet pepper courgette spring onion.</p>
+
+<p>Fennel komatsuna celery prairie turnip asparagus bok choy dulse okra spring onion green bean broccoli turnip greens cucumber silver beet dandelion bitterleaf. Desert raisin horseradish onion salsify silver beet celery wattle seed broccoli rabe amaranth rock melon shallot. Garbanzo courgette pea sprouts salsify rock melon watercress fennel desert raisin swiss chard lotus root squash bok choy gumbo turnip greens. Broccoli rabe onion sweet pepper swiss chard rock melon salsify summer purslane quandong bitterleaf chickweed epazote okra kombu jícama amaranth courgette soko corn. Garbanzo catsear celery summer purslane desert raisin celery leek bell pepper seakale bush tomato plantain turnip greens.</p>
+
+<p>Here is some code:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='scala'><span class='line'><span class="k">case</span> <span class="k">class</span> <span class="nc">Testing</span><span class="o">(</span><span class="n">one</span><span class="k">:</span> <span class="kt">Int</span><span class="o">,</span> <span class="n">two</span><span class="k">:</span> <span class="kt">Int</span><span class="o">,</span> <span class="n">three</span><span class="k">:</span> <span class="kt">Int</span><span class="o">){</span>
+</span><span class='line'>  <span class="k">def</span> <span class="n">four</span> <span class="k">=</span> <span class="mi">4</span>
+</span><span class='line'><span class="o">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Here is a kitten:</p>
+
+<p><img src="http://placekitten.com/300/500" width="150" height="250"></p>
+
+<p>Here is a gist:</p>
+
+<div><script src='https://gist.github.com/6758279.js'></script>
+<noscript><pre><code>case class Test(one: Int, two: Int, three: Int)</code></pre></noscript></div>
+
+]]></content>
+  </entry>
+  
+</feed>
