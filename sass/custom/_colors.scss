@@ -1,10 +1,11 @@
 $my-bg: #fafafa;
-$my-text: #303438;
+//$my-text: #303438;
+$my-text: #5A5A5A;
 $header-bg: #303438;
 $my-title: $my-bg;
 $sidebar-link-color: #6B2C35;
 
-$my-text-light: #666;
+$my-text-light: #BBB;
 $nav-bg: $my-bg;
 
 $link-color: lighten($sidebar-link-color, 4);
@@ -78,4 +79,3 @@ $footer-bg-back: $my-bg !default;
 //$solar-blue:      #81A2BE;
 //$solar-cyan:      #8ABEB7;
 //$solar-green:     #B5BD68;
-//

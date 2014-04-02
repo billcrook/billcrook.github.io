@@ -1,14 +1,24 @@
-// This File is imported last, and will override other styles in the cascade
-// Add styles here to make changes without digging in too much
-
-body > header h1 {
-  font-weight: 900;
-  padding-left: 0px;
-  text-indent: -6px;
+body {
+font-size: .9em;
+ > header { 
+    h1 {
+     font-weight: 900;
+     font-size: 2.5em;
+     padding-left: 0px;
+     text-indent: -6px;
+    }
+    h2 {
+     font-size: .8em;
+    }
+ }
 }
 
-body > header h2 {
-  font-size: .4em;
+.entry-title {
+  font-size: 1.5em;
+}
+
+.entry-title a {
+  font-size: .7em;
 }
 
 .sidebar > section > h1 {
