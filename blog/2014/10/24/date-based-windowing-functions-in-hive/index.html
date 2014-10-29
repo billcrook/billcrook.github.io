@@ -5,7 +5,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>bill crook</title>
+  <title>Date-based windowing functions in Hive - bill crook</title>
   <meta name="author" content="Bill Crook">
 
   
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://bill.crook.io">
+  <link rel="canonical" href="http://bill.crook.io/blog/2014/10/24/date-based-windowing-functions-in-hive">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/stylesheets/data-table.css" media="screen, projection" rel="stylesheet" type="text/css" />
@@ -60,15 +60,12 @@
 </nav>
   <div id="main">
     <div id="content">
-      <div class="blog-index">
+      <div>
+<article class="hentry" role="article">
   
-  
-  
-    <article>
-      
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2014/10/24/date-based-windowing-functions-in-hive/">Date-based Windowing Functions in Hive</a></h1>
+      <h1 class="entry-title">Date-based Windowing Functions in Hive</h1>
     
     
       <p class="meta">
@@ -91,7 +88,7 @@
   </header>
 
 
-  <div class="entry-content"><p>At my current gig, when migrating our data warehouse to Hive, I had a bit of trouble tracking down documentation on date-based windowing function support in Hive. I had to piece together information from a few sources, so I figured this might be useful to others. At the time of this post, the Hive <a href="https://cwiki.apache.org/confluence/display/Hive/LanguageManual+WindowingAndAnalytics" title="Windowing functions">wiki page on windowing functions</a> makes no mention of range-based windows, but I did find so elsewhere. There are a couple Hive <a href="https://issues.apache.org/jira/browse/HIVE-4197">jira</a> <a href="https://issues.apache.org/jira/browse/HIVE-4112">tickets</a> which mention support for range-based windows. Unfortunately, neither discuss date-based ranges which is my use case. A bit more digging turned up a valuable <a href="http://www.qubole.com/big-data-analytics-using-window-functions">interview</a> with one of the Hortonworks committers where he sheds a bit more light on the topic:</p>
+<div class="entry-content"><p>At my current gig, when migrating our data warehouse to Hive, I had a bit of trouble tracking down documentation on date-based windowing function support in Hive. I had to piece together information from a few sources, so I figured this might be useful to others. At the time of this post, the Hive <a href="https://cwiki.apache.org/confluence/display/Hive/LanguageManual+WindowingAndAnalytics" title="Windowing functions">wiki page on windowing functions</a> makes no mention of range-based windows, but I did find so elsewhere. There are a couple Hive <a href="https://issues.apache.org/jira/browse/HIVE-4197">jira</a> <a href="https://issues.apache.org/jira/browse/HIVE-4112">tickets</a> which mention support for range-based windows. Unfortunately, neither discuss date-based ranges which is my use case. A bit more digging turned up a valuable <a href="http://www.qubole.com/big-data-analytics-using-window-functions">interview</a> with one of the Hortonworks committers where he sheds a bit more light on the topic:</p>
 
 <blockquote><p>The window ranges today are numeric constants, whereas, in the spec, you can have arbitrary numerical expressions. And in Hive, you don’t have date intervals. So if you want to do date-based windows, you pretty much have to break down the date into components, and treat each component as a int.</p><footer><strong>Harish Butani</strong> <cite><a href='http://www.qubole.com/big-data-analytics-using-window-functions'>www.qubole.com/&hellip;</a></cite></footer></blockquote>
 
@@ -359,22 +356,16 @@ Now suppose we want to answer the question: What is the purchase amount for each
 
 <p>Hope this is useful to someone!</p>
 </div>
-  
-  
 
 
-    </article>
-  
-  
-    <article>
+  <footer>
+    <p class="meta">
       
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/10/23/hello-world/">Hello World!</a></h1>
-    
-    
-      <p class="meta">
-        
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Bill Crook</span></span>
+
+      
 
 
 
@@ -386,27 +377,42 @@ Now suppose we want to answer the question: What is the purchase amount for each
   
 
 
-<time datetime="2014-10-23T22:15:00-04:00" pubdate data-updated="true">Oct 23<span>rd</span>, 2014</time>
-        
-      </p>
+<time datetime="2014-10-24T11:16:00-04:00" pubdate data-updated="true">Oct 24<span>th</span>, 2014</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/big-data/'>big-data</a>, <a class='category' href='/blog/categories/data-science/'>data-science</a>, <a class='category' href='/blog/categories/hadoop/'>hadoop</a>, <a class='category' href='/blog/categories/hive/'>hive</a>
+  
+</span>
+
+
+    </p>
     
-  </header>
-
-
-  <div class="entry-content"><p>This is my obligitory &ldquo;Hello World&rdquo; post. I&rsquo;ve been thinking of starting a development blog for probably a decade now and have been collecting ideas for posts over that time. It&rsquo;s about time I start adding my signal to the noise!</p>
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://bill.crook.io/blog/2014/10/24/date-based-windowing-functions-in-hive/" data-via="billcrook42" data-counturl="http://bill.crook.io/blog/2014/10/24/date-based-windowing-functions-in-hive/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
 </div>
-  
-  
 
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2014/10/23/hello-world/" title="Previous Post: Hello World!">&laquo; Hello World!</a>
+      
+      
+    </p>
+  </footer>
+</article>
 
-    </article>
-  
-  <div class="pagination">
-    
-    <a href="/blog/archives">Blog Archives</a>
-    
-  </div>
 </div>
+
 <aside class="sidebar">
   
     <section>
@@ -431,7 +437,7 @@ Now suppose we want to answer the question: What is the purchase amount for each
 <section>
   <h1><i class="icon-github icon-large"></i> GitHub Repos</h1>
   <ul id="gh_repos">
-    <li class="loading">Status updating&#8230;</li>
+    <li class="loading">Status updating...</li>
   </ul>
   
   <a href="https://github.com/billcrook">@billcrook</a> on GitHub
@@ -468,6 +474,7 @@ Now suppose we want to answer the question: What is the purchase amount for each
 
   
 </aside>
+
 
     </div>
   </div>

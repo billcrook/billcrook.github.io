@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: misc | bill crook]]></title>
+  <link href="http://bill.crook.io/blog/categories/misc/atom.xml" rel="self"/>
+  <link href="http://bill.crook.io/"/>
+  <updated>2014-10-29T12:01:43-04:00</updated>
+  <id>http://bill.crook.io/</id>
+  <author>
+    <name><![CDATA[Bill Crook]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Hello World!]]></title>
+    <link href="http://bill.crook.io/blog/2014/10/23/hello-world/"/>
+    <updated>2014-10-23T22:15:00-04:00</updated>
+    <id>http://bill.crook.io/blog/2014/10/23/hello-world</id>
+    <content type="html"><![CDATA[<p>This is my obligitory &ldquo;Hello World&rdquo; post. I&rsquo;ve been thinking of starting a development blog for probably a decade now and have been collecting ideas for posts over that time. It&rsquo;s about time I start adding my signal to the noise!</p>
+]]></content>
+  </entry>
+  
+</feed>
