@@ -1,7 +1,7 @@
-@include font-face("GeosansLight", font-files("fonts/GeosansLight.ttf", truetype));
+//@include font-face("GeosansLight", font-files("/font/GeosansLight.ttf", truetype));
 
-$sans: "GeosansList", sans-serif;
-$serif: "GeosansLight", serif;
+$sans: sans-serif;
+$serif: "Roboto Slab", serif;
 $mono: "Source Code Pro", monospace;
 $heading-font-family: "Roboto Slab", serif;
 $header-title-font-family: "Orbitron", sans-serif;
