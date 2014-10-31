@@ -42,7 +42,7 @@ Now suppose we want to answer the question: What is the purchase amount for each
 {% codeblock Date-based Windowing lang:sql %}
 select *, 
  sum(amount) over 
-   (partition by user order by unix_timestamp(purchase_date) RANGE 172800 PRECEDING) 
+   (partition by user order by unix_timestamp(purchase_date) RANGE 172800 PRECEDING) as 3_day_window
  from transactions 
  order by user, purchase_date asc;
 {% endcodeblock %}
@@ -51,7 +51,7 @@ A few things to note about the query. First, we want to do this on a user-basis,
 
 Here is the result set:
 
-row_num|user|store       |purchase_date|amount|n_day_total
+row_num|user|store       |purchase_date|amount|3_day_total
 :--|:----:|:------------|:-------------:|------:|----:
 1|42|petes coffee|2014-01-01|1|1
 2|42|petes coffee|2014-01-02|3|4
@@ -73,7 +73,7 @@ row_num|user|store       |purchase_date|amount|n_day_total
 
 Let's explain some of the results.
 
-* Row 9 - The n_day_total is 2 because only row 8 is included. Row 7 is for the previous user, which is the partition boundary, so the range traversal ceases.
+* Row 9 - The 3_day_total is 2 because only row 8 is included. Row 7 is for the previous user, which is the partition boundary, so the range traversal ceases.
 * Row 10 - Here we have a full 3 day range since it does not bump up against the partition boundary. The n-day total is 1+1+1 for the dates 2014-01-01, 2014-01-02 and 2014-01-03.
 * Row 14 - This proves that the window is sliding along with the current row. The n-day total is 5+5+5 for the dates 2014-01-05, 2014-01-06 and 2014-01-07.
 
