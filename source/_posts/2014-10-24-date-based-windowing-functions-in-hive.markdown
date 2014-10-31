@@ -47,7 +47,7 @@ select *,
  order by user, purchase_date asc;
 {% endcodeblock %}
 
-A few things to note about the query. First, we want to do this on a user-basis, so we partition by user. Next, we must use *unix_timestamp* to convert the date to a numeric constant in seconds. This will be the value in seconds since the [unix epoch](https://en.wikipedia.org/wiki/Unix_time#Encoding_time_as_a_number). Finally, the *RANGE X PRECEDING* says, go backwards from the current row until the value of the column used in the *order by* clause changes by *X* amount or we hit the partition boundary. In this example I use 172800 which is 2 days in seconds plus the current row, giving me a 3 day window.
+A few things to note about the query. First, we want to do this on a user-basis, so we partition by user. Next, we must use *unix_timestamp* to convert the date to a numeric constant in seconds. This will be the value in seconds since the [unix epoch](https://en.wikipedia.org/wiki/Unix_time#Encoding_time_as_a_number). Finally, the syntax *RANGE X PRECEDING* says, go backwards from the current row until either we hit the partition boundary or the value changes by *X* amount. The value being examinined is derived from the order by clause in the partition statement, in this case it is *unix_timestamp(purchase_date)*. For this example I used a range of 172800 which is 2 days in seconds. This gives me a 3 day total window since the *current row* is included.
 
 Here is the result set:
 
@@ -73,8 +73,8 @@ row_num|user|store       |purchase_date|amount|3_day_total
 
 Let's explain some of the results.
 
-* Row 9 - The 3_day_total is 2 because only row 8 is included. Row 7 is for the previous user, which is the partition boundary, so the range traversal ceases.
-* Row 10 - Here we have a full 3 day range since it does not bump up against the partition boundary. The n-day total is 1+1+1 for the dates 2014-01-01, 2014-01-02 and 2014-01-03.
-* Row 14 - This proves that the window is sliding along with the current row. The n-day total is 5+5+5 for the dates 2014-01-05, 2014-01-06 and 2014-01-07.
+* **Row 9:** The 3_day_total is 2 because only row 8 is included. Row 7 is for the previous user, which is the partition boundary, so the range traversal ceases.
+* **Row 10:** Here we have a full 3 day range since it does not bump up against the partition boundary. The 3_day_total is 1+1+1 for the dates 2014-01-01, 2014-01-02 and 2014-01-03.
+* **Row 14:** This proves that the window is sliding along with the current row. The 3_day_total is 5+5+5 for the dates 2014-01-05, 2014-01-06 and 2014-01-07.
 
 Hope this is useful to someone!
