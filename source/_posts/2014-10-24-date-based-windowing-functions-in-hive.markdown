@@ -7,7 +7,7 @@ categories: hive hadoop data-science big-data
 published: true
 ---
 
-At my current gig, when migrating our data warehouse to Hive, I had a bit of trouble tracking down documentation on date-based windowing function support in Hive. I had to piece together information from a few sources, so I figured this might be useful to others. At the time of this post, the Hive [wiki page on windowing functions](https://cwiki.apache.org/confluence/display/Hive/LanguageManual+WindowingAndAnalytics "Windowing functions") makes no mention of range-based windows, but I did find so elsewhere. There are a couple Hive [jira](https://issues.apache.org/jira/browse/HIVE-4197) [tickets](https://issues.apache.org/jira/browse/HIVE-4112) which mention support for range-based windows. Unfortunately, neither discuss date-based ranges which is my use case. A bit more digging turned up a valuable [interview](http://www.qubole.com/big-data-analytics-using-window-functions) with a [Hortonworks](http://hortonworks.com) committer where he sheds a bit more light on the topic:
+At my current gig, when migrating our data warehouse to Hive, I had a bit of trouble tracking down documentation on support for date-based windowing functions in Hive. I had to piece together information from a few sources, so I figured this might be useful to others. At the time of this post, the Hive [wiki page on windowing functions](https://cwiki.apache.org/confluence/display/Hive/LanguageManual+WindowingAndAnalytics "Windowing functions") makes no mention of range-based windows, but I did find useful snippets elsewhere. There are a couple Hive [jira](https://issues.apache.org/jira/browse/HIVE-4197) [tickets](https://issues.apache.org/jira/browse/HIVE-4112) which mention support for range-based windows. Unfortunately, neither discuss my use case of date-based ranges. A bit more digging turned up a valuable [interview](http://www.qubole.com/big-data-analytics-using-window-functions) with a [Hortonworks](http://hortonworks.com) committer where he sheds more light on the topic:
 
 {% blockquote Harish Butani http://www.qubole.com/big-data-analytics-using-window-functions %}
 The window ranges today are numeric constants, whereas, in the spec, you can have arbitrary numerical expressions. And in Hive, you don’t have date intervals. So if you want to do date-based windows, you pretty much have to break down the date into components, and treat each component as a int.
@@ -36,7 +36,7 @@ user|store       |purchase_date|amount
 
 
 <p/>
-Now suppose we want to answer the question: What is the 3-day purchase amount sum leading up to each transaction? The following query could answer that using a range-based window.
+Now suppose we want to answer the question: What is the 3-day purchase amount total leading up to each transaction? The following query could answer that using a range-based window.
 
 
 {% codeblock Date-based Windowing lang:sql %}
@@ -47,7 +47,7 @@ select *,
  order by user, purchase_date asc;
 {% endcodeblock %}
 
-A few things to note about the query. First, we want to do this on a user-basis, so we partition by user. Next, we must use *unix_timestamp* to convert the date to a numeric constant. This will be the value in seconds since the [unix epoch](https://en.wikipedia.org/wiki/Unix_time#Encoding_time_as_a_number). Finally, the syntax *RANGE X PRECEDING* means: go backwards from the current row until either we hit a partition boundary or the value changes by *X* amount. The value to observe for change is controlled by the *order by* clause in the partition statement. In this case it is *unix_timestamp(purchase_date)*. For the range, I use 172800 which is 2 days in seconds. This gives me a 3 day total window since the *current row* is included.
+A few things to note about the query. First, we want to do this on a user-basis, so we partition by user. Next, we must use *unix_timestamp* to convert the date to a numeric constant. This will be the value in seconds since the [unix epoch](https://en.wikipedia.org/wiki/Unix_time#Encoding_time_as_a_number). Finally, the syntax *RANGE X PRECEDING* means: go backwards from the current row until either we hit a partition boundary or the value changes by *X* amount. The value observed for change is controlled via the *order by* clause in the partition statement. In this case it is *unix_timestamp(purchase_date)*. For the range, I use 172800 which is 2 days in seconds. This gives me a 3 day total window since the *current row* is included.
 
 Here is the result set:
 
@@ -76,4 +76,4 @@ Let's explain some of the results.
 * **Row 10:** Here we have a full 3 day range since it does not bump up against the partition boundary. The 3_day_total is 1+1+1 for the dates 2014-01-01, 2014-01-02 and 2014-01-03.
 * **Row 14:** This proves that the window is sliding along with the current row. The 3_day_total is 5+5+5 for the dates 2014-01-05, 2014-01-06 and 2014-01-07.
 
-Hope this is useful to someone!
+I hope this is useful to someone!
