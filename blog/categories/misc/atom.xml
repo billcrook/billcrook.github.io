@@ -4,7 +4,7 @@
   <title><![CDATA[Category: misc | bill crook]]></title>
   <link href="http://bill.crook.io/blog/categories/misc/atom.xml" rel="self"/>
   <link href="http://bill.crook.io/"/>
-  <updated>2014-11-01T15:32:46-04:00</updated>
+  <updated>2014-11-03T09:34:09-05:00</updated>
   <id>http://bill.crook.io/</id>
   <author>
     <name><![CDATA[Bill Crook]]></name>
@@ -14,11 +14,11 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Hello World!]]></title>
+    <title type="html"><![CDATA[Hello, World!]]></title>
     <link href="http://bill.crook.io/blog/2014/10/23/hello-world/"/>
     <updated>2014-10-23T22:15:00-04:00</updated>
     <id>http://bill.crook.io/blog/2014/10/23/hello-world</id>
-    <content type="html"><![CDATA[<p>This is my obligitory &ldquo;Hello World&rdquo; post. I&rsquo;ve been thinking of starting a development blog for probably a decade now and have been collecting ideas for posts over that time. It&rsquo;s about time I start adding my signal to the noise!</p>
+    <content type="html"><![CDATA[<p>This is my obligitory <a href="https://en.wikipedia.org/wiki/%22Hello,_world!%22_program">&ldquo;Hello, World!&rdquo;</a> blog post. I&rsquo;ve been considering a development blog for probably a decade now and have been collecting ideas for posts over that time. Today is finally the day. It&rsquo;s about time I add my signal to the noise!</p>
 ]]></content>
   </entry>
   

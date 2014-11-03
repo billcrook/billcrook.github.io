@@ -2,19 +2,19 @@
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
         <loc>http://bill.crook.io/blog/2014/10/23/hello-world/</loc>
-        <lastmod>2014-10-29T11:49:04-04:00</lastmod>
+        <lastmod>2014-11-03T09:30:53-05:00</lastmod>
     </url>
     <url>
         <loc>http://bill.crook.io/blog/2014/10/24/date-based-windowing-functions-in-hive/</loc>
-        <lastmod>2014-11-01T15:22:20-04:00</lastmod>
+        <lastmod>2014-11-03T09:32:32-05:00</lastmod>
     </url>
     <url>
         <loc>http://bill.crook.io/blog/archives/</loc>
-        <lastmod>2014-11-01T15:22:20-04:00</lastmod>
+        <lastmod>2014-11-03T09:32:32-05:00</lastmod>
     </url>
     <url>
         <loc>http://bill.crook.io/</loc>
-        <lastmod>2014-11-01T15:22:20-04:00</lastmod>
+        <lastmod>2014-11-03T09:32:32-05:00</lastmod>
     </url>
     <url>
         <loc>http://bill.crook.io/robots.txt</loc>

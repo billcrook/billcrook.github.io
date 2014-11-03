@@ -9,7 +9,7 @@
   <meta name="author" content="Bill Crook">
 
   
-  <meta name="description" content="At my current gig, when migrating our data warehouse to Hive, I had a bit of trouble tracking down documentation on date-based windowing function &hellip;">
+  <meta name="description" content="At my current gig, when migrating our data warehouse to Hive, I had a bit of trouble tracking down documentation on support for date-based windowing &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -101,7 +101,7 @@
   </header>
 
 
-<div class="entry-content"><p>At my current gig, when migrating our data warehouse to Hive, I had a bit of trouble tracking down documentation on date-based windowing function support in Hive. I had to piece together information from a few sources, so I figured this might be useful to others. At the time of this post, the Hive <a href="https://cwiki.apache.org/confluence/display/Hive/LanguageManual+WindowingAndAnalytics" title="Windowing functions">wiki page on windowing functions</a> makes no mention of range-based windows, but I did find so elsewhere. There are a couple Hive <a href="https://issues.apache.org/jira/browse/HIVE-4197">jira</a> <a href="https://issues.apache.org/jira/browse/HIVE-4112">tickets</a> which mention support for range-based windows. Unfortunately, neither discuss date-based ranges which is my use case. A bit more digging turned up a valuable <a href="http://www.qubole.com/big-data-analytics-using-window-functions">interview</a> with a <a href="http://hortonworks.com">Hortonworks</a> committer where he sheds a bit more light on the topic:</p>
+<div class="entry-content"><p>At my current gig, when migrating our data warehouse to Hive, I had a bit of trouble tracking down documentation on support for date-based windowing functions in Hive. I had to piece together information from a few sources, so I figured this might be useful to others. At the time of this post, the Hive <a href="https://cwiki.apache.org/confluence/display/Hive/LanguageManual+WindowingAndAnalytics" title="Windowing functions">wiki page on windowing functions</a> makes no mention of range-based windows, but I did find useful snippets elsewhere. There are a couple Hive <a href="https://issues.apache.org/jira/browse/HIVE-4197">jira</a> <a href="https://issues.apache.org/jira/browse/HIVE-4112">tickets</a> which mention support for range-based windows. Unfortunately, neither discuss my use case of date-based ranges. A bit more digging turned up a valuable <a href="http://www.qubole.com/big-data-analytics-using-window-functions">interview</a> with a <a href="http://hortonworks.com">Hortonworks</a> committer where he sheds more light on the topic:</p>
 
 <blockquote><p>The window ranges today are numeric constants, whereas, in the spec, you can have arbitrary numerical expressions. And in Hive, you don’t have date intervals. So if you want to do date-based windows, you pretty much have to break down the date into components, and treat each component as a int.</p><footer><strong>Harish Butani</strong> <cite><a href='http://www.qubole.com/big-data-analytics-using-window-functions'>www.qubole.com/&hellip;</a></cite></footer></blockquote>
 
@@ -209,7 +209,7 @@
 
 
 <p><p/>
-Now suppose we want to answer the question: What is the 3-day purchase amount sum leading up to each transaction? The following query could answer that using a range-based window.</p>
+Now suppose we want to answer the question: What is the 3-day purchase amount total leading up to each transaction? The following query could answer that using a range-based window.</p>
 
 <p><figure class='code'><figcaption><span>Date-based Windowing </span></figcaption>
  <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
@@ -224,7 +224,7 @@ Now suppose we want to answer the question: What is the 3-day purchase amount su
 </span><span class='line'> <span class="k">order</span> <span class="k">by</span> <span class="k">user</span><span class="p">,</span> <span class="n">purchase_date</span> <span class="k">asc</span><span class="p">;</span>
 </span></code></pre></td></tr></table></div></figure></p>
 
-<p>A few things to note about the query. First, we want to do this on a user-basis, so we partition by user. Next, we must use <em>unix_timestamp</em> to convert the date to a numeric constant. This will be the value in seconds since the <a href="https://en.wikipedia.org/wiki/Unix_time#Encoding_time_as_a_number">unix epoch</a>. Finally, the syntax <em>RANGE X PRECEDING</em> means: go backwards from the current row until either we hit a partition boundary or the value changes by <em>X</em> amount. The value to observe for change is controlled by the <em>order by</em> clause in the partition statement. In this case it is <em>unix_timestamp(purchase_date)</em>. For the range, I use 172800 which is 2 days in seconds. This gives me a 3 day total window since the <em>current row</em> is included.</p>
+<p>A few things to note about the query. First, we want to do this on a user-basis, so we partition by user. Next, we must use <em>unix_timestamp</em> to convert the date to a numeric constant. This will be the value in seconds since the <a href="https://en.wikipedia.org/wiki/Unix_time#Encoding_time_as_a_number">unix epoch</a>. Finally, the syntax <em>RANGE X PRECEDING</em> means: go backwards from the current row until either we hit a partition boundary or the value changes by <em>X</em> amount. The value observed for change is controlled via the <em>order by</em> clause in the partition statement. In this case it is <em>unix_timestamp(purchase_date)</em>. For the range, I use 172800 which is 2 days in seconds. This gives me a 3 day total window since the <em>current row</em> is included.</p>
 
 <p>Here is the result set:</p>
 
@@ -367,7 +367,7 @@ Now suppose we want to answer the question: What is the 3-day purchase amount su
 </ul>
 
 
-<p>Hope this is useful to someone!</p>
+<p>I hope this is useful to someone!</p>
 </div>
 
 
@@ -417,7 +417,7 @@ Now suppose we want to answer the question: What is the 3-day purchase amount su
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2014/10/23/hello-world/" title="Previous Post: Hello World!">&laquo; Hello World!</a>
+        <a class="basic-alignment left" href="/blog/2014/10/23/hello-world/" title="Previous Post: Hello, World!">&laquo; Hello, World!</a>
       
       
     </p>
@@ -441,7 +441,7 @@ Now suppose we want to answer the question: What is the 3-day purchase amount su
       </li>
     
       <li class="post">
-        <a href="/blog/2014/10/23/hello-world/">Hello World!</a>
+        <a href="/blog/2014/10/23/hello-world/">Hello, World!</a>
       </li>
     
   </ul>
