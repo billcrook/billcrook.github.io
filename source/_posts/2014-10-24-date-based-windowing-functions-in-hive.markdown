@@ -3,11 +3,11 @@ layout: post
 title: "Date-based windowing functions in Hive"
 date: 2014-10-24 11:16
 comments: true
-categories: hive hadoop data-science big-data
+categories: hive hive-0.13 hadoop data-science big-data
 published: true
 ---
 
-At my current gig, when migrating our data warehouse to Hive, I had a bit of trouble tracking down documentation on support for date-based windowing functions in Hive. I had to piece together information from a few sources, so I figured this might be useful to others. At the time of this post, the Hive [wiki page on windowing functions](https://cwiki.apache.org/confluence/display/Hive/LanguageManual+WindowingAndAnalytics "Windowing functions") makes no mention of range-based windows, but I did find useful snippets elsewhere. There are a couple Hive [jira](https://issues.apache.org/jira/browse/HIVE-4197) [tickets](https://issues.apache.org/jira/browse/HIVE-4112) which mention support for range-based windows. Unfortunately, neither discuss my use case of date-based ranges. A bit more digging turned up a valuable [interview](http://www.qubole.com/big-data-analytics-using-window-functions) with a [Hortonworks](http://hortonworks.com) committer where he sheds more light on the topic:
+At my current gig, when migrating our data warehouse to Hive 0.13, I had a bit of trouble tracking down documentation on support for date-based windowing functions in Hive. I had to piece together information from a few sources, so I figured this might be useful to others. At the time of this post, the Hive [wiki page on windowing functions](https://cwiki.apache.org/confluence/display/Hive/LanguageManual+WindowingAndAnalytics "Windowing functions") makes no mention of range-based windows, but I did find useful snippets elsewhere. There are a couple Hive [jira](https://issues.apache.org/jira/browse/HIVE-4197) [tickets](https://issues.apache.org/jira/browse/HIVE-4112) which mention support for range-based windows. Unfortunately, neither discuss my use case of date-based ranges. A bit more digging turned up a valuable [interview](http://www.qubole.com/big-data-analytics-using-window-functions) with a [Hortonworks](http://hortonworks.com) committer where he sheds more light on the topic:
 
 {% blockquote Harish Butani http://www.qubole.com/big-data-analytics-using-window-functions %}
 The window ranges today are numeric constants, whereas, in the spec, you can have arbitrary numerical expressions. And in Hive, you don’t have date intervals. So if you want to do date-based windows, you pretty much have to break down the date into components, and treat each component as a int.
